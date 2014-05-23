@@ -363,10 +363,18 @@ module.exports = function (grunt) {
             ]
         },
 
-        gitcommit: {
-            dist: {
+        gitpull: {
+            app: {
                 options: {
-                    message: 'Test commit from grunt'
+                    remote: 'origin',
+                    branch: 'master'
+                }
+            }
+        },
+        gitcommit: {
+            app: {
+                options: {
+                    message: 'Automated commit'
                 },
                 files: {
                     src: [
@@ -382,10 +390,26 @@ module.exports = function (grunt) {
             }
         },
         gitpush: {
-            dist: {
+            app: {
                 options: {
+                    remote: 'origin',
                     branch: 'master'
                 }
+            }
+        },
+
+        push: {
+            options: {
+                host: 'goonhub.com',
+                remoteBase: 'public_html/dharveydev.com',
+                disablePerms: true
+            },
+            dist: {
+                files: [{
+                    cwd: '<%= config.dist %>',
+                    src: ['**', '**/.*'],
+                    expand: true
+                }]
             }
         }
     });
@@ -446,11 +470,16 @@ module.exports = function (grunt) {
         'build'
     ]);
 
-
-    grunt.registerTask('commit', [
-        'gitcommit'
+    grunt.registerTask('deploy', [
+        'push'
     ]);
-    grunt.registerTask('push', [
+
+    grunt.registerTask('pull', [
+        'gitpull'
+    ]);
+
+    grunt.registerTask('git', [
+        'gitcommit',
         'gitpush'
     ]);
 };
