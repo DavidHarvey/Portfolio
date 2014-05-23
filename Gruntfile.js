@@ -369,7 +369,7 @@ module.exports = function (grunt) {
                     message: 'Test commit from grunt'
                 },
                 files: {
-                    src: ['<%= config.app %>']
+                    src: ['*']
                 }
             }
         },
