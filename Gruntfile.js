@@ -478,7 +478,7 @@ module.exports = function (grunt) {
         'gitpull'
     ]);
 
-    grunt.registerTask('git', [
+    grunt.registerTask('push', [
         'gitcommit',
         'gitpush'
     ]);
