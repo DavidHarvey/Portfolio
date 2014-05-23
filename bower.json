@@ -1,0 +1,12 @@
+{
+  "name": "portfolio",
+  "private": true,
+  "dependencies": {
+    "modernizr": "~2.6.2",
+    "jquery": "~1.11.0",
+    "normalize-scss": "~3.0.1",
+    "jquery-scrollspy": "*",
+    "jquery.validation": "~1.12.0"
+  },
+  "devDependencies": {}
+}

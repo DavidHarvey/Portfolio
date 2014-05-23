@@ -1,0 +1,468 @@
+body {
+    background: $bodyBG;
+}
+
+#container > nav {
+    background: $navBG;
+    z-index: $z2;
+    ul {
+        border-right: 10px solid $navRightShadow;
+        background: $navBG;
+    }
+    #trackingLine {
+        background: $trackingLineBG;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        span {
+            position: absolute;
+            overflow: visible !important;
+            top: -150px;
+            right: 0;
+            height: 50px;
+            @include navSlantRight($brightGreen, $z3);
+        }
+    }
+    li:not(.hidden) {
+        a {
+            background: linear-gradient(to right, $navItemBG 50%, $linkColor 50.001%);
+            background-size: 200% 100%;
+            background-position: 0 0;
+            transition: background-position .3s ease-in-out;
+            position: relative;
+            @include navSlantRight($navSlantOff);
+            &.current.second {
+                @include navSlantRight($brightGreen, $z3);
+            }
+        }
+        .current {
+            background-position: -100% 0;
+        }
+    }
+    li.logo {
+        a {
+            pointer-events: auto;
+            position: relative;
+            background: linear-gradient(to right, $navBG 50%, $linkColor 50.001%);
+            background-size: 200% 100%;
+            &:before, &:after {content: none;}
+            span {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background: url('../images/logo-slim.png') no-repeat;
+                background-position: center center;
+                transition: background-position .3s ease-in-out;
+            }
+        }
+        &.hidden a {
+            pointer-events: none;
+            span {
+                background-position: $navWidth center;
+            }
+        }
+    }
+}
+
+@keyframes border-pulsate {
+  from {border-color: $bodyColor;}
+  to   {border-color: $bodyBG;}
+}
+
+#content {
+    > header {
+        background: url('../images/logo-slim-black.png') no-repeat;
+        background-position: 30px center;
+        border: 1px solid $bodyColor;
+        position: relative;
+        transition: background-position .3s ease-in-out;
+        &.hidden {
+            background-position: -100px center;
+        }
+        h1 {
+            margin: 0 0 0 120px;
+        }
+        span {
+            position: absolute;
+            background: white;
+        }
+        .top, .bottom {
+            height: 5px;
+            width: $headerWidth - 10px;
+            left: 4px;
+        }
+        .left, .right {
+            width: 5px;
+            height: ($headerHeight + ($headerHorizPadding * 2)) - 8px;
+            top: 4px;
+        }
+        .top {top: -3px;}
+        .right {right: -3px;}
+        .bottom {bottom: -3px;}
+        .left {left: -3px;}
+        &:hover {
+            animation: border-pulsate 0.08s 6 alternate;
+        }
+    }
+
+    > article {
+        margin-bottom: $articleBottom;
+        @extend .cf;
+        h2 {
+            text-transform: lowercase;
+            margin: 0 0 $articleHeaderMargin 0;
+            padding: $articleHeaderPad 0;
+            font-size: 2em;
+            position: relative;
+            &:before {
+                content: "";
+                position: absolute;
+                top: 20px;
+                left: -(60px - 9px);
+                width: 20px;
+                height: 20px;
+                background: $navRightShadow;
+                z-index: $z1;
+                transform: rotate(45deg) scale(1) skew(1deg) translate(0px);
+            }
+        }
+    }
+}
+
+#work {
+    position: relative;
+    &:before {
+        content: "";
+        position: absolute;
+        display: block !important;
+        top: 100px;
+        bottom: 280px;
+        left: 0;
+        right: 0;
+        z-index: $z1;
+        background: linear-gradient(to right, $bodyBG, $bodyBG 50px, $pictureBoxShadBG 50px, $pictureBoxShadBG 200px, $bodyBG 200px);
+    }
+    > section {
+        @extend .cf;
+        padding-bottom: $sectionBotMargin;
+        display: table;
+        position: relative;
+        z-index: $z2;
+        &:last-of-type {
+            padding-bottom: 0;
+        }
+    }
+    .pictures {
+        display: table-cell;
+        vertical-align: top;
+        
+        > div {
+            padding-left: $pictureBoxLBorderSize;
+            width: $pictureBoxWidth;
+            background: $pictureBoxBG;
+            position: relative;
+            box-shadow: $pictureBoxShadSize $pictureBoxShadSize 0px 0px $pictureBoxShadBG;
+
+            &:before, &:after {
+                content: "";
+                position: absolute;
+                width: ($pictureBoxSlideSize + $pictureBoxLBorderSize);
+                left: -($pictureBoxSlideSize);
+                bottom: 0;
+            }
+            &:before {
+                top: 0;
+                background: linear-gradient(to bottom, $navRightShadow 50%, $pictureBoxSlideBG 50.001%);
+                background-size: 100% 200%;
+                background-position: 0 0;
+                transition: all .5s;
+            }
+            &:after {
+                height: 50%;
+                border-left: $pictureBoxSlideSize solid $bodyBG;
+                border-top: $pictureBoxSlideSize solid transparent;
+            }
+            &.current {
+                &:before {
+                    background-position: 0 -100%;
+                }
+            }
+            a {
+                border: 1px solid rgba(255, 255, 255, 0.25);
+                transition: box-shadow 0.3s;
+                display: inline-block;
+                position: relative;
+                z-index: $z2;
+                &:hover, &:active, &:focus {
+                    box-shadow: 0px 0px 2px 1px #8BDD6A;
+                }
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: -1px;
+                    right: -2px;
+                    bottom: -1px;
+                    left: -1px;
+                    transition: background-position .3s ease-in-out;
+                    background: linear-gradient(to bottom, transparent 50%, rgba(90, 192, 50, 0.5) 50.001%);
+                    background-size: 100% 200%;
+                    background-position: 0 0;
+                }
+                &:hover:before, &:active:before, &:focus:before {
+                    background-position: 0 -100%;
+                }
+                &:after {
+                    content: attr(data-hover);
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    text-align: center;
+                    transition: all .3s; 
+                    color: white;
+                    font-weight: bold;
+                    font-size: 0.75em;
+                    opacity: 0;
+                    text-transform: uppercase;
+                }
+                &:hover:after, &:active:after, &:focus:after {
+                    top: 50%;
+                    opacity: 1;
+                    margin-top: -0.5em;
+                }
+            }
+            > a {
+                margin: 10px 10px 0 10px;
+            }
+            > div {
+                background: $pictureBoxDarker;
+                margin-top: 5px;
+                @extend .cf;
+                a {
+                    float: left;
+                    margin: 10px 0 10px 10px;
+                    z-index: $z1;
+                }
+                a:last-child {
+                    float: right;
+                    margin: 10px 10px 10px 0;
+                }
+                a:after {
+                    font-size: 0.75em;
+                }
+            }
+            .full {
+                margin: 10px;
+            }
+        }
+    }
+    .details {
+        display: table-cell;
+        vertical-align: top;
+        padding-left: 30px;
+        h3 {
+            margin: 0;
+            font-size: 1.6em;
+        }
+        .description {
+            margin: 0.5em 0 1em 2px;
+            line-height: 1.3;
+            text-align: justify;
+        }
+        h4 {
+            margin: 0;
+            font-size: 1.2em;
+        }
+        .role {
+            margin: 0.5em 0 5px 0;
+            div {
+                @extend .cf;
+                font-size: 0;
+                span {
+                    display: inline-block;
+                    transition: all .3s ease-in-out;
+                    background: linear-gradient(to top, $green 50%, #333 50.001%);
+                    background-size: 100% 200%;
+                    background-position: 0 0;
+                    color: white;
+                    padding: 5px 8px;
+                    font-size: 11px;
+                    margin: 0 5px 5px 0;
+                    border-bottom: 3px solid $green;
+                }
+                span:hover, span:focus, span:active {
+                    background-position: 0 100%;
+                }
+            }
+            p {
+                margin: 5px 0 0 2px;
+                font-size: 14px;
+                text-align: justify;
+            }
+        }
+        > a {
+            padding: 0 3px;
+        }
+    }
+}
+
+#about {
+    p {
+        text-align: justify;
+    }
+    .resume {
+        text-align: center;
+        a {
+            display: inline-block;
+            padding: 20px 30px;
+            transition: all .3s ease-in-out;
+            background: linear-gradient(to top, $green 50%, #333 50.001%);
+            background-size: 100% 200%;
+            background-position: 0 0;
+            font-weight: bold;
+            font-size: 0.75em;
+            text-transform: uppercase;
+            color: #eee;
+            margin: 0 auto;
+            text-align: center;
+            margin: 10px;
+            border-bottom: 5px solid $green;
+            &:hover, &:active, &:focus {
+                background-position: 0 100%;
+                color: #fff;
+            }
+        }
+    }
+    ul {
+        padding: 0;
+        text-align: center;
+    
+        li {
+            display: inline-block;
+            font-size: 0.75em;
+            padding: 10px;
+            margin: 10px;
+            width: 120px;
+            background: #333;
+            color: white;
+            box-shadow: $pictureBoxShadSize $pictureBoxShadSize 0px 0px $pictureBoxShadBG;
+            border-bottom: 3px solid #5AC032;
+            transition: all .3s;
+
+            &:hover {
+                box-shadow: 10px 10px 0px 0px #ccc;
+            }
+        }
+    }
+}
+
+#contact {
+    form {
+        position: relative;
+        input, textarea {
+            display: block;
+            margin: 10px 0;
+            box-sizing : border-box;
+            width: 100%;
+            padding: 10px 10px 15px 10px;
+            border: 1px solid #aaa;
+            transition: all .3s;
+            background: #333 linear-gradient(to top, transparent, transparent 5px, #fff 5px);
+
+            &:hover, &:active, &:focus {
+                box-shadow: 0px 0px 3px 0px $brightGreen;
+                background-color: $green;
+                outline: none;
+            }
+            &.error {
+                background-color: rgb(206, 62, 62);
+                &:hover, &:active, &:focus {
+                    box-shadow: 0px 0px 3px 0px rgb(206, 62, 62);
+                }
+            }
+        }
+        label.error {
+            position: absolute;
+            right: 20px;
+            font-size: 0.8em;
+            transition: all .3s;
+            color: white;
+            background: #333;
+            padding: 10px;
+            border-bottom: 3px solid $red;
+            z-index: $z2;
+            &:after {
+                content: "";
+                bottom: 100%;
+                left: 50%;
+                border: solid transparent;
+                height: 0;
+                width: 0;
+                position: absolute;
+                pointer-events: none;
+                border-color: rgba(51, 51, 51, 0);
+                border-bottom-color: #333;
+                border-width: 10px;
+                margin-left: -10px;
+            }
+        }
+        button {
+            display: block;
+            transition: all .3s ease-in-out;
+            background: linear-gradient(to top, $green 50%, #333 50.001%);
+            background-size: 100% 200%;
+            background-position: 0 0;
+            border: 0;
+            border-bottom: 5px solid $green;
+            margin: 10px auto;
+            box-sizing : border-box;
+            padding: 20px 0;
+            width: 200px;
+            color: #eee;
+            font-weight: bold;
+            font-size: 0.75em;
+            text-transform: uppercase;
+
+            &:hover, &:active, &:focus {
+                background-position: 0 100%;
+                color: #fff;
+                outline: none;
+            }
+        }
+    }
+    .ajaxError, .ajaxResponse {
+        color: white;
+        display: none;
+        padding: 20px;
+        text-align: center;
+        font-size: 0.75em;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    .ajaxError {
+        margin: 10px 0;
+        background: $red;
+    }
+    .ajaxResponse {
+        position: absolute;
+        background: $green;
+        border-bottom: 5px solid $brightGreen;
+        top: 150px;
+        left: 30px;
+        right: 30px;
+        z-index: $z4;
+    }
+    .curtain {
+        display: none;
+        background: rgba(255, 255, 255, 0.6);
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: $z3;
+    }
+}

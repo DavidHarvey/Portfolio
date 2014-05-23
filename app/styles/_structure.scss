@@ -1,0 +1,59 @@
+body, html {
+	height: 100%;
+	min-height: 100%;
+}
+
+#container {
+	display: table;
+	height: 100%;
+	width: 100%;
+	> nav, > #contentWrap {
+		display: table-cell;
+		vertical-align: top;
+	}
+	> nav {
+		width: $navWidth;
+		min-width: $navWidth;
+		position: relative;
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 20px 0 0 0;
+			position: fixed;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			width: $navWidth;
+			a {
+				display: block;
+				padding: 20px;
+				margin-top: 30px;
+				line-height: 20px;
+			}
+			li:first-child a {
+				text-align: center;
+				margin-top: 0;
+				min-height: 59px;
+			}
+		}
+	}
+	> #contentWrap {
+		z-index: $z3;
+	}
+}
+
+#trackingLine {
+	width: $trackingLineWidth;
+}
+
+#content {
+	width: $contentWidth;
+	min-width: $contentMinWidth;
+	padding: 2rem 30px 2rem 50px;
+	> header {
+		width: $headerWidth - ($headerHorizPadding * 2) - 12;
+		height: $headerHeight;
+		padding: $headerHorizPadding $headerVertPadding;
+		margin: 0 0 10rem 0;
+	}
+}

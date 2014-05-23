@@ -1,0 +1,40 @@
+*, *:after, *:before {
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-o-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+}
+
+body {
+	font-family: 'Open Sans', Arial, sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	color: $bodyColor;
+}
+
+h1, h2, h3, h4 {
+	font-weight: normal;
+}
+
+a {
+	text-decoration: none;
+	color: $linkColor;
+	&:hover, &:active, &:focus {color: $linkColorHover;}
+}
+
+#container > nav {
+	a {color: $navColor;}
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: right;
+}
+
+#content > header {
+	h1 {
+		font-size: 22px;
+		line-height: 1.2;
+		font-family: 'Open Sans Condensed', sans-serif;
+	}
+}

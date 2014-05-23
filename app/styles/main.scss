@@ -1,0 +1,94 @@
+// bower:scss
+@import "../../bower_components/normalize-scss/_normalize.scss";
+// endbower
+
+//Colors
+$green: #5AC032;
+$brightGreen: #8BDD6A;
+$red: #ce3e3e;
+
+//Globals
+$bodyBG: #fff;
+$bodyColor: #333;
+$linkColor: $green;
+$linkColorHover: #2F8340;
+$contentWidth: 50%;
+$contentMinWidth: 600px;
+
+//Nav
+$navWidth: 120px;
+$navColor: #fff;
+$navBG: #111;
+$trackingLineWidth: 5px;
+$trackingLineBG: #555;
+$navRightShadow: #efefef;
+$navItemBG: #222;
+$navSlantOff: #888;
+
+//Header
+$headerWidth: $contentMinWidth;
+$headerHeight: 50px;
+$headerVertPadding: 30px;
+$headerHorizPadding: 25px;
+
+//Articles
+$articleBottom: 10rem;
+$articleHeaderPad: 0.3rem;
+$articleHeaderMargin: 0.5rem;
+
+//Work
+$sectionBotMargin: 100px;
+$pictureBoxWidth: 300px;
+$pictureBoxHeight: 282px;
+$pictureBoxBG: #222;
+$pictureBoxShadBG: $navRightShadow;
+$pictureBoxShadSize: 10px;
+$pictureBoxLBorderSize: 5px;
+$pictureBoxLBorderBG: #999;
+$pictureBoxSlideSize: 10px;
+$pictureBoxSlideBG: $green;
+$pictureBoxDarker: #111;
+
+//Z Levels
+$z1: 1;
+$z2: 5;
+$z3: 10;
+$z4: 15;
+
+.cf {
+    *zoom: 1;
+    &:before, &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+@mixin navSlantRight($color, $z: $z2) {
+    &:after, &:before {
+        content: "";
+        width: 0;
+        position: absolute;
+        right: 0;
+        z-index: $z;
+    }
+    &:before {
+        border-left: 5px solid $color;
+        border-top: 5px solid transparent;
+        bottom: 0;
+        top: 0;
+    }
+    &:after {
+        border-right: 5px solid $color;
+        border-bottom: 5px solid transparent;
+        height: 5px;
+        bottom: -5px;
+    }
+}
+
+@import "typography";
+@import "structure";
+@import "content";
+@import "magnific-popup";

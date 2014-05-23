@@ -1,0 +1,961 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"slide",
+				"slideDown	.slideDown()"
+			],
+			[
+				"trasn",
+				"transition"
+			],
+			[
+				"tra",
+				"transparent"
+			],
+			[
+				"trans",
+				"transition"
+			],
+			[
+				"pictureBo",
+				"pictureBoxShadBG"
+			],
+			[
+				"toggle",
+				"toggleLogo"
+			],
+			[
+				"update",
+				"updateHash"
+			],
+			[
+				"has",
+				"hasClass	.hasClass"
+			],
+			[
+				"upda",
+				"updateHash"
+			],
+			[
+				"clear",
+				"clearTrackerPos"
+			],
+			[
+				"each",
+				"each	.each()"
+			],
+			[
+				"attr",
+				"attr	.attr() - single"
+			],
+			[
+				"background",
+				"background-position"
+			],
+			[
+				"navlogo",
+				"navLogoWrap"
+			],
+			[
+				"tr",
+				"transparent"
+			],
+			[
+				"outer",
+				"outerHeight	.outerHeight"
+			],
+			[
+				"list-",
+				"list-style-type"
+			],
+			[
+				"hea",
+				"header	Tag"
+			],
+			[
+				"text",
+				"text-transform"
+			],
+			[
+				"content",
+				"content-padding"
+			],
+			[
+				"serv",
+				"servers"
+			],
+			[
+				"map",
+				"mapcontainer"
+			],
+			[
+				"filter",
+				"filter-height"
+			],
+			[
+				"image",
+				"image-url"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"data",
+				"data_array"
+			],
+			[
+				"array_key",
+				"array_key_exists"
+			],
+			[
+				"form",
+				"formSearchTerm"
+			],
+			[
+				"vote",
+				"votestatus"
+			],
+			[
+				"row",
+				"rowID"
+			],
+			[
+				"fet",
+				"fetchColumn"
+			],
+			[
+				"limit",
+				"limit_start"
+			],
+			[
+				"sea",
+				"searchtermsql"
+			],
+			[
+				"prepa",
+				"prepared"
+			],
+			[
+				"json",
+				"json_encode"
+			],
+			[
+				"count",
+				"counterparts"
+			],
+			[
+				"new",
+				"newRow"
+			],
+			[
+				"ticket",
+				"ticketCount"
+			],
+			[
+				"tick",
+				"ticketCount"
+			],
+			[
+				"fini",
+				"finishedRoundGameType"
+			],
+			[
+				"last",
+				"lastValidCenter"
+			],
+			[
+				"deat",
+				"deathCounts"
+			],
+			[
+				"dea",
+				"deathCounts"
+			],
+			[
+				"dupl",
+				"duplicateKeys"
+			],
+			[
+				"death",
+				"deathsArray"
+			],
+			[
+				"listing-til",
+				"listing-tiles-amount"
+			],
+			[
+				"tiles",
+				"listing-tiles"
+			],
+			[
+				"sub",
+				"sub-filter-height"
+			],
+			[
+				"pointer",
+				"pointer-events"
+			],
+			[
+				"filer",
+				"filterContainer"
+			],
+			[
+				"list-style",
+				"list-style-type:   (property)"
+			],
+			[
+				"empty",
+				"emptyInputs"
+			],
+			[
+				"UsersDel",
+				"UsersDeleteForm"
+			],
+			[
+				"confirm",
+				"Confirm"
+			],
+			[
+				"products",
+				"productsSummary"
+			],
+			[
+				"no",
+				"nowrap"
+			],
+			[
+				"required",
+				"requiredDocs"
+			],
+			[
+				"end",
+				"endforeach"
+			],
+			[
+				"backg",
+				"background-color"
+			],
+			[
+				"select",
+				"selectAddresses"
+			],
+			[
+				"selec",
+				"selectAddresses"
+			],
+			[
+				"parent",
+				"parentRow"
+			],
+			[
+				"cou",
+				"count"
+			],
+			[
+				"is",
+				"is_int"
+			],
+			[
+				"Rfq",
+				"RfqProductSpecification"
+			],
+			[
+				"conversa",
+				"conversation"
+			],
+			[
+				"prev",
+				"preventDefault"
+			],
+			[
+				"var",
+				"var_dump"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "Gruntfile.js",
+			"settings":
+			{
+				"buffer_size": 12822,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/styles/main.scss",
+			"settings":
+			{
+				"buffer_size": 1802,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/styles/_typography.scss",
+			"settings":
+			{
+				"buffer_size": 659,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/styles/_structure.scss",
+			"settings":
+			{
+				"buffer_size": 925,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/styles/_content.scss",
+			"settings":
+			{
+				"buffer_size": 13440,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/index.html",
+			"settings":
+			{
+				"buffer_size": 10724,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/scripts/main.js",
+			"settings":
+			{
+				"buffer_size": 7847,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/php/contact.php",
+			"settings":
+			{
+				"buffer_size": 907,
+				"line_ending": "Windows",
+				"name": "<?php"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 380.0,
+		"selected_items":
+		[
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"pakc",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 512.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/portfolio/bower_components/jquery.validation/dist/jquery.validate.js",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/portfolio/bower_components/jquery.validation/dist/jquery.validate.min.js",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/Gruntfile.js",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/portfolio/app/styles/_magnific-popup.scss",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/portfolio/app/styles/_magnific_popup.scss",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/portfolio/app/scripts/vendor/jquery-magnific-popup.js",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/portfolio/app/scripts/main.js",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/js/isilkor-maps.js",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/Slim/Controllers/maps.php",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/templates/maps/view.html",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/js/main.js",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/portfolio/app/scripts/jquery-visible.js",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/templates/elements/serverStatus.html",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/Slim/Functions.php",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/php/byond/parse.php",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/php/byond/export.php",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/templates/maps/index.html",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/Slim/Controllers/tickets.php",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/templates/rounds/view.html",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/templates/tickets/index.html",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/templates/maps/view - Copy.html",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/Slim/Controllers/rounds.php",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/css/apart/map.scss",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/templates/mapLayout.html",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/Slim/Views/TwigExtension.php",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/templates/tickets/view.html",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/index.php",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/css/map.scss",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/bower_components/jquery1.11.0/jquery.min.js",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/bower_components/jquery1.11.0/jquery.js",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/templates/deaths/highscores.html",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/templates/emptyLayout.html",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/js/jquery-mousewheel.js",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/templates/deaths/index.html",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/php/pdoDB.class.php",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/Slim/Controllers/home.php",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/js/masonry.js",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/js/imagesloaded.js",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/sitemap.xml",
+		"/C/Users/Daedalus/Downloads/perlsitemap/config.xml",
+		"/C/Users/Daedalus/Downloads/perlsitemap/example_config.xml",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/cron/tweeter.php",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/templates/rounds/index.html",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/css/lightbox.scss",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/js/lightbox.js",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/Slim/Controllers/deaths.php",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/css/screen.css",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/css/lightbox.css",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/Slim/Views/Twig.php",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/templates/fines/index.html",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/Slim/Controllers/fines.php",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/templates/fines/view.html",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/Slim/Slim.php",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/js/jquery-scrollspy.js",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/templates/home/index.html",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/test.php",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/notes.txt",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/templates/deaths/test.html",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/templates/fines/index (Hyperion's conflicted copy 2014-02-05).html",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/css/font-awesome/_path.scss",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/css/font-awesome/_variables.scss",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/css/font-awesome.scss",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/css/_variables.scss",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/css/_icons.scss",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/css/_core.scss",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/css/_mixins.scss",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/css/_main.scss",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/css/_base.scss",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/parser.php",
+		"/C/Users/Daedalus/Documents/Dropbox/webdev/goonstationhub/src/css/main.scss",
+		"/C/wamp/www/tradogram/app/View/Admins/payment.ctp",
+		"/C/wamp/www/boasttech/app/contact.php",
+		"/C/wamp/www/tradogram/app/Controller/UsersController.php",
+		"/C/wamp/www/tradogram/app/View/Pages/help.ctp",
+		"/C/wamp/www/tradogram/app/View/RequestForQuotes/listing.ctp",
+		"/C/wamp/www/tradogram/app/View/QuoteReports/adminlisting.ctp",
+		"/C/wamp/www/tradogram/app/View/RequestForQuotes/adminbuy.ctp",
+		"/C/wamp/www/tradogram/app/View/AuditReports/adminlisting.ctp",
+		"/C/wamp/www/tradogram/app/View/RequestForQuotes/adminsupply.ctp",
+		"/C/wamp/www/tradogram/app/View/AuditReports/listing.ctp",
+		"/C/wamp/www/tradogram/app/View/RequestForQuotes/adminBuy.ctp",
+		"/C/wamp/www/tradogram/app/View/Pages/prices.ctp",
+		"/C/wamp/www/tradogram/app/View/Pages/terms.ctp",
+		"/C/wamp/www/tradogram/app/View/Pages/privacy.ctp",
+		"/C/wamp/www/tradogram/app/Controller/BranchSuppliersController.php",
+		"/C/wamp/www/tradogram/app/View/Emails/html/inviteunknown.ctp",
+		"/C/wamp/www/tradogram/app/View/BranchSuppliers/invite.ctp",
+		"/C/wamp/www/tradogram/app/View/Pages/contact.ctp",
+		"/C/wamp/www/tradogram/app/View/RequestForQuotes/view.ctp",
+		"/C/wamp/www/tradogram/app/View/AuditReports/view.ctp",
+		"/C/wamp/www/tradogram/app/View/Admins/userpermission.ctp",
+		"/C/wamp/www/tradogram/app/View/Users/view.ctp",
+		"/C/wamp/www/tradogram/app/View/BranchSuppliers/listing.ctp",
+		"/C/wamp/www/tradogram/app/View/Branches/add.ctp",
+		"/C/wamp/www/tradogram/app/View/Companies/add.ctp",
+		"/C/wamp/www/tradogram/app/webroot/css/public.css",
+		"/C/wamp/www/tradogram/app/Controller/TransactionCompletionNoticesController.php",
+		"/C/wamp/www/tradogram/app/View/TransactionCompletionNotices/view.ctp",
+		"/C/wamp/www/tradogram/app/View/RequestForQuotes/add.ctp",
+		"/C/wamp/www/tradogram/app/View/Emails/html/registration.ctp",
+		"/C/wamp/www/tradogram/app/View/Pages/faq.ctp",
+		"/C/wamp/www/tradogram/app/View/Pages/resources.ctp",
+		"/C/wamp/www/tradogram/app/View/Pages/sources.ctp",
+		"/C/wamp/www/tradogram/app/View/Addresses/edit.ctp",
+		"/C/wamp/www/tradogram/app/View/Users/verifyemail.ctp",
+		"/C/wamp/www/tradogram/app/View/QuoteReports/view.ctp",
+		"/C/wamp/www/tradogram/app/View/PurchaseOrders/view.ctp",
+		"/C/wamp/www/tradogram/app/View/Layouts/Emails/html/default.ctp",
+		"/C/wamp/www/tradogram/app/View/Emails/html/invitesupplier.ctp",
+		"/C/wamp/www/tradogram/app/View/Pages/secured.ctp",
+		"/C/wamp/www/tradogram/app/View/Users/edit.ctp",
+		"/C/wamp/www/tradogram/app/View/QuoteReports/listing.ctp",
+		"/C/wamp/www/tradogram/app/View/Companies/userlisting.ctp",
+		"/C/wamp/www/tradogram/app/View/TransactionCompletionNotices/listing.ctp",
+		"/C/wamp/www/tradogram/app/Controller/PurchaseOrdersController.php",
+		"/C/wamp/www/tradogram/app/View/ProductLists/view.ctp",
+		"/C/wamp/www/tradogram/app/View/Alerts/listing.ctp",
+		"/C/wamp/www/tradogram/app/View/PurchaseOrders/listing.ctp",
+		"/C/wamp/www/tradogram/app/Controller/AlertsController.php",
+		"/C/wamp/www/tradogram/app/View/TransactionCompletionNotices/index.ctp",
+		"/C/wamp/www/tradogram/app/View/ProductLists/listing.ctp",
+		"/C/wamp/www/tradogram/app/View/ProductLists/edit.ctp",
+		"/C/wamp/www/tradogram/app/View/ProductLists/add.ctp",
+		"/C/wamp/www/tradogram/app/Controller/ProductListsController.php",
+		"/C/wamp/www/tradogram/app/View/Companies/edit.ctp",
+		"/C/wamp/www/tradogram/app/View/Branches/edit.ctp",
+		"/C/wamp/www/tradogram/app/View/Branches/addnew.ctp",
+		"/C/wamp/www/tradogram/app/View/Branches/view.ctp"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"C:\\Users\\Daedalus\\Documents\\Dropbox\\webdev\\portfolio\\app\\scripts\\main.js",
+			"C:\\Users\\Daedalus\\Documents\\Dropbox\\webdev\\goonstationhub\\src",
+			"C:\\Users\\Rhea\\Downloads\\tradogra_fourth.sql",
+			"C:\\wamp\\www\\tradogram\\app\\Model"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"MAP_TILE_SIZE",
+			"TILE_SIZE",
+			"font-weight",
+			"navLogoWrap",
+			".logo",
+			"console.",
+			"200",
+			"20",
+			"loading",
+			"images/",
+			"getConnection",
+			"-webkit",
+			"htmlmin",
+			"example",
+			"40px",
+			"padding",
+			"fadeIn",
+			"trans",
+			"table-layout",
+			"dimmed",
+			"\n            ",
+			"leaves",
+			"leave",
+			"specificData",
+			"info@",
+			"ul {",
+			"input",
+			"form",
+			"nav",
+			"product",
+			"password",
+			"forgot",
+			"pop-up",
+			"sentQuote",
+			".gridster",
+			"ui-slider",
+			".picker",
+			"`",
+			"open sans",
+			"8em",
+			"login",
+			"loginForm",
+			"input[type=text], input[type=password]",
+			".photo",
+			"input",
+			"image",
+			"placeholder",
+			".ui-state-default, .ui-widget-content .ui-state-default",
+			".ui-dialog-titlebar",
+			".ui-dialog",
+			".ui-dialog {",
+			".ui-dialog",
+			"belongTo",
+			".ui-progressbar .ui-progressbar-value",
+			".center",
+			"autoProductID",
+			"debug",
+			"ui-widget-overlay",
+			".well",
+			"section.rows",
+			".rows",
+			".gridster li",
+			".grister li",
+			".gridster li",
+			".ajax"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"navLogo",
+			"'"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Gruntfile.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 12822,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								9617,
+								9617
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 4106.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/styles/main.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1802,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								697,
+								697
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/styles/_typography.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 659,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								654,
+								654
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/styles/_structure.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 925,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								657,
+								657
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/styles/_content.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 13440,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								12704,
+								12704
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 5344.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 5,
+					"file": "app/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10724,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8983,
+								8983
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2182.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/scripts/main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7847,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6784,
+								6784
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3748.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "app/php/contact.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 907,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								899,
+								899
+							]
+						],
+						"settings":
+						{
+							"auto_name": "<?php",
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "portfolio.sublime-project",
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"C:\\Users\\Daedalus\\Documents\\Dropbox\\webdev\\goonstationhub\\goonstationhub.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
