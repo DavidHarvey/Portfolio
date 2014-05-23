@@ -369,7 +369,15 @@ module.exports = function (grunt) {
                     message: 'Test commit from grunt'
                 },
                 files: {
-                    src: ['*']
+                    src: [
+                        '*',
+                        '!bower_components',
+                        '!dist',
+                        '!node_modules',
+                        '!.tmp',
+                        '!.sass-cache',
+                        '!test/bower_components'
+                    ]
                 }
             }
         },
