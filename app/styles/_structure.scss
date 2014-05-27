@@ -3,27 +3,42 @@ body, html {
 	min-height: 100%;
 }
 
+// body {
+// 	@media screen and (max-width: $break2) {
+// 		overflow-x: hidden;
+// 	}
+// }
+
 #container {
-	display: table;
 	height: 100%;
 	width: 100%;
-	> nav, > #contentWrap {
-		display: table-cell;
-		vertical-align: top;
-	}
-	> nav {
+	position: relative;
+	> nav.main {
 		width: $navWidth;
-		min-width: $navWidth;
-		position: relative;
+		position: fixed;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		transition: margin .3s;
+		z-index: $z3;
+		overflow: hidden;
+
+		.ps-scrollbar-y-rail {
+			position: absolute;
+			right: 0;
+			width: 5px;
+			z-index: $z4;
+			.ps-scrollbar-y {
+				width: 5px;
+				position: absolute;
+				right: 0;
+			}
+		}
 		ul {
 			list-style-type: none;
 			margin: 0;
 			padding: 20px 0 0 0;
-			position: fixed;
-			top: 0;
-			left: 0;
-			bottom: 0;
-			width: $navWidth;
+
 			a {
 				display: block;
 				padding: 20px;
@@ -34,11 +49,41 @@ body, html {
 				text-align: center;
 				margin-top: 0;
 				min-height: 59px;
+				@media screen and (max-width: $break2) {
+					visibility: hidden;
+				}
 			}
+		}
+		@media screen and (max-width: $break2) {
+			margin-left: -$navWidth;
+			&.mobileShown {
+				margin-left: -1px;
+			}
+		}
+	}
+	> nav.mobile {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 50px;
+		z-index: $z4;
+		display: none;
+		@media screen and (max-width: $break2) {
+			display: block;
 		}
 	}
 	> #contentWrap {
 		z-index: $z3;
+		margin-left: $navWidth;
+		transition: all .3s;
+		@media screen and (max-width: $break2) {
+			margin-left: 0;
+			margin-top: 50px;
+			&.mobileShown {
+				margin-left: $navWidth - 1;
+			}
+		}
 	}
 }
 
@@ -49,11 +94,21 @@ body, html {
 #content {
 	width: $contentWidth;
 	min-width: $contentMinWidth;
-	padding: 2rem 30px 2rem 50px;
+	padding: 2rem 30px 2rem 40px;
+	transition: all .3s;
+	@media screen and (max-width: $break1) {
+		width: auto;
+		min-width: inherit;
+	}
+	@media screen and (max-width: $break2) {
+		padding: 1rem 30px 1rem 20px;
+	}
 	> header {
 		width: $headerWidth - ($headerHorizPadding * 2) - 12;
-		height: $headerHeight;
 		padding: $headerHorizPadding $headerVertPadding;
 		margin: 0 0 10rem 0;
+		@media screen and (max-width: $break1) {
+			width: auto;
+		}
 	}
 }

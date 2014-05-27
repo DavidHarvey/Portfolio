@@ -205,7 +205,7 @@ module.exports = function (grunt) {
                     src: [
                         '<%= config.dist %>/scripts/{,*/}*.js',
                         '<%= config.dist %>/styles/{,*/}*.css',
-                        '<%= config.dist %>/images/**/*.*',
+                        //'<%= config.dist %>/images/**/*.*',   was messing with retina.js image swap-in 
                         '<%= config.dist %>/styles/fonts/{,*/}*.*',
                         '<%= config.dist %>/*.{ico,png}'
                     ]
@@ -478,7 +478,7 @@ module.exports = function (grunt) {
         'gitpull'
     ]);
 
-    grunt.registerTask('push', [
+    grunt.registerTask('git', [
         'gitcommit',
         'gitpush'
     ]);

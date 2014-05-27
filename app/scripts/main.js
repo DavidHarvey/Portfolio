@@ -4,8 +4,9 @@ $(document).ready(function() {
 	////////////////////////
 	// GLOBALS
 	////////////////////////
+
 	var header = $('#content > header');
-	var navLogo = $('#container > nav li.logo');
+	var navLogo = $('#container > nav.main li.logo');
 	var tracker = $('#trackingLine span');
 	var trackerTop = -150; //Default position
 	var trackerHeight = 50; //Default height
@@ -126,7 +127,6 @@ $(document).ready(function() {
 		//Get position of article
 		var id = hash.substring(2);
 		var target = $('#'+id).offset().top;
-		//Set window scroll top to it
 		$('html, body').scrollTop(target);
 	}
 
@@ -138,8 +138,37 @@ $(document).ready(function() {
 	// EVENTS
 	////////////////////////
 
+	//Mobile view, nav toggle
+	$('#menuToggle').click(function(event) {
+		event.preventDefault();
+		var contentWidth = $('#contentWrap').width();
+		if ($('#container > nav.main').hasClass('mobileShown')) {
+			//hide
+			$('#container > nav.main').removeClass('mobileShown');
+			$('#contentWrap').removeClass('mobileShown');
+			setTimeout(function() {
+				$('#contentWrap').attr('style', null);
+			}, 300);
+		}
+		else {
+			//show
+			$('#contentWrap').width(contentWidth);
+			$('#container > nav.main').addClass('mobileShown');
+			$('#contentWrap').addClass('mobileShown');
+		}
+	});
+
+	$('body').on('click', '#container > nav.main.mobileShown a', function() {
+		//hide
+		$('#container > nav.main').removeClass('mobileShown');
+		$('#contentWrap').removeClass('mobileShown');
+		setTimeout(function() {
+			$('#contentWrap').attr('style', null);
+		}, 300);
+	});
+
 	//Nav item on hover
-	$('#container > nav').on('mouseenter focus', 'li a', function() {
+	$('#container > nav.main').on('mouseenter focus', 'li a', function() {
 		if ($(this).hasClass('pageActive')) {return;}
 		toggleCurrentNav($(this), 'on', true);
 		tracker.stop(true).animate({
@@ -147,32 +176,37 @@ $(document).ready(function() {
 			height: $(this).outerHeight()
 		}, animDelay);
 	});
-	$('#container > nav').on('mouseleave blur', 'li a', function() {
+	$('#container > nav.main').on('mouseleave blur', 'li a', function() {
 		if ($(this).hasClass('pageActive')) {return;}
 		toggleCurrentNav($(this), 'off', true);
 		updateTrackerPos($(this), true);
 	});
 
-	//Nav item on click
+	//Nav item on click (well, any link really)
 	$('a[href*=#]:not([href=#])').click(function(event) {
 		event.preventDefault();
 		var ele = $(this);
 		var id = ele.attr('href').substring(1);
 		if (id === 'content') {id = false;}
 		var target = (id ? $('#'+id) : $('#content'));
+		var mobileHeaderHeight = ($('#container > nav.mobile').is(':visible') ? $('#container > nav.mobile').height() : 0);
 		$('html, body').animate({
-			scrollTop: target.offset().top,
+			scrollTop: target.offset().top - mobileHeaderHeight,
 		}, {
 			duration: 300,
 			start: function() {
 				navJumping = true;
-				$('#container > nav a').each(function(index, el) {
+				$('#container > nav.main a').each(function(index, el) {
 					if ($(el).attr('href') !== '#' + id) {
 						toggleCurrentNav($(el), 'off');
 					}
 				});
 				updateHash(id);
 				if (!ele.parent().hasClass('logo')) {
+					//find the relevant nav icon if we're not clicking on it
+					if (!ele.parent().parent().parent().hasClass('main')) {
+						ele = $('#container > nav.main a[href=\"#'+id+'\"]');
+					}
 					toggleCurrentNav(ele, 'on');
 				}
 			},
@@ -199,7 +233,7 @@ $(document).ready(function() {
 
 	//Page area on scroll to
 	$.each($('#content > article'), function(index, val) {
-		var navLink = $('#container > nav a[href="#'+$(val).attr('id')+'"]');
+		var navLink = $('#container > nav.main a[href="#'+$(val).attr('id')+'"]');
 		var id = $(val).attr('id');
 		$(val).scrollspy({
 			min: $(val).offset().top - 100,
@@ -254,10 +288,6 @@ $(document).ready(function() {
 		});
 	});
 
-	$('#work .role div a').click(function(event) {
-		event.preventDefault();
-	});
-
 	//Contact form validation and submission
 	var messageSent = false;
 	$('#contact form').validate({
@@ -308,6 +338,23 @@ $(document).ready(function() {
 	$('#contact form input, #contact form textarea').validate({
 		onfocusout: true,
 		onkeyup: true
+	});
+
+	//Disable side nav horizontal scrolling (while preserving vertical)
+	$(window).scroll(function() {
+		$('#container > nav.main').css('left', -$(document).scrollLeft());
+	});
+
+	//Scrollbar for the sidenav when the window height is short
+	$('#container > nav.main').perfectScrollbar({
+		wheelSpeed: 20,
+		wheelPropagation: false,
+		minScrollbarLength: 20,
+		includePadding: true
+	});
+
+	$(window).resize(function() {
+		$('#container > nav.main').perfectScrollbar('update');
 	});
 	////////////////////////
 	// EVENTS END

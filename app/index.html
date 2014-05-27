@@ -10,8 +10,8 @@
     <!-- bower:css -->
     <!-- endbower -->
     <!-- endbuild -->
-    <!-- build:css(.tmp) styles/main.css -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700|Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
     <!-- build:js scripts/vendor/modernizr.js -->
@@ -24,7 +24,11 @@
     <![endif]-->
 
     <div id="container">
-        <nav>
+        <nav class="mobile">
+            <a href="" title="Open menu" id="menuToggle"><img src="images/menu-icon.png" alt="Menu" /></a>
+            <a href="#content"><img src="images/logo-slim-small.png" alt="Logo" /></a>
+        </nav>
+        <nav class="main">
             <ul>
                 <li class="logo hidden"><a href="#content"><span></span></a></li>
                 <li><a href="#work">Work</a></li>
@@ -135,7 +139,7 @@
                     <p>When I'm not busy coding things I'm an avid downhill skiier, target archery practitioner, video game player and movie aficionado.</p>
 
                     <div class="resume">
-                        <a href="">Take a look at my resume</a>
+                        <a href="DavidHarveyCV.pdf">Take a look at my resume</a>
                     </div>
 
                     <h3>My Skills</h3>
@@ -176,7 +180,9 @@
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../bower_components/jquery-scrollspy/jquery-scrollspy.js"></script>
     <script src="../bower_components/jquery.validation/dist/jquery.validate.js"></script>
-    <script src="../bower_components/jquery.validation/dist/additional-methods.js"></script>
+    <script src="../bower_components/retina.js/dist/retina.js"></script>
+    <script src="../bower_components/perfect-scrollbar/src/jquery.mousewheel.js"></script>
+    <script src="../bower_components/perfect-scrollbar/src/perfect-scrollbar.js"></script>
     <!-- endbower -->
     <script src="scripts/vendor/jquery-visible.js"></script>
     <script src="scripts/vendor/jquery-magnific-popup.js"></script>
@@ -184,12 +190,13 @@
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
-        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-        e.src='//www.google-analytics.com/analytics.js';
-        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-        ga('create','UA-XXXXX-X');ga('send','pageview');
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-42676009-3', 'dharveydev.com');
+        ga('send', 'pageview');
     </script>
 
     <!-- build:js({app,.tmp}) scripts/main.js -->

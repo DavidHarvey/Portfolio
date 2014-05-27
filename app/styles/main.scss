@@ -55,6 +55,10 @@ $z2: 5;
 $z3: 10;
 $z4: 15;
 
+//Media query breakpoints
+$break1: 820px;
+$break2: 550px;
+
 .cf {
     *zoom: 1;
     &:before, &:after {
