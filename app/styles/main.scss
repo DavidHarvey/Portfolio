@@ -1,5 +1,6 @@
 // bower:scss
 @import "../../bower_components/normalize-scss/_normalize.scss";
+@import "font-awesome/font-awesome.scss";
 // endbower
 
 //Colors
@@ -21,7 +22,7 @@ $navColor: #fff;
 $navBG: #111;
 $trackingLineWidth: 5px;
 $trackingLineBG: #555;
-$navRightShadow: #efefef;
+$navRightShadow: #eee;
 $navItemBG: #222;
 $navSlantOff: #888;
 

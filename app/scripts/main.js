@@ -139,15 +139,19 @@ $(document).ready(function() {
 	////////////////////////
 
 	//Mobile view, nav toggle
+	var toggling = false; //a fun word
 	$('#menuToggle').click(function(event) {
 		event.preventDefault();
+		if (toggling) {return;}
 		var contentWidth = $('#contentWrap').width();
 		if ($('#container > nav.main').hasClass('mobileShown')) {
 			//hide
+			toggling = true;
 			$('#container > nav.main').removeClass('mobileShown');
 			$('#contentWrap').removeClass('mobileShown');
 			setTimeout(function() {
 				$('#contentWrap').attr('style', null);
+				toggling = false;
 			}, 300);
 		}
 		else {
@@ -160,10 +164,13 @@ $(document).ready(function() {
 
 	$('body').on('click', '#container > nav.main.mobileShown a', function() {
 		//hide
+		if (toggling) {return;}
+		toggling = true;
 		$('#container > nav.main').removeClass('mobileShown');
 		$('#contentWrap').removeClass('mobileShown');
 		setTimeout(function() {
 			$('#contentWrap').attr('style', null);
+			toggling = false;
 		}, 300);
 	});
 
@@ -352,7 +359,16 @@ $(document).ready(function() {
 		minScrollbarLength: 20,
 		includePadding: true
 	});
-
+	var trackerContainer = $('#trackingLine');
+	$('#container > nav.main').bind('mousewheel', function(event) {
+		var scrollbar = $('#container > nav.main .ps-scrollbar-y-rail');
+		if (event.originalEvent.wheelDelta /120 > 0) {
+			trackerContainer.css('top', scrollbar.css('top'));
+		}
+		else{
+			trackerContainer.css('top', scrollbar.css('top'));
+		}
+	});
 	$(window).resize(function() {
 		$('#container > nav.main').perfectScrollbar('update');
 	});

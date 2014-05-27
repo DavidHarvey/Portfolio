@@ -25,13 +25,15 @@ body, html {
 
 		.ps-scrollbar-y-rail {
 			position: absolute;
-			right: 0;
+			left: 0;
 			width: 5px;
 			z-index: $z4;
 			.ps-scrollbar-y {
 				width: 5px;
 				position: absolute;
-				right: 0;
+				left: 0;
+				background: #fff;
+				opacity: 0.2;
 			}
 		}
 		ul {
@@ -54,6 +56,21 @@ body, html {
 				}
 			}
 		}
+		.social {
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 420px;
+			bottom: 10px;
+			font-size: 1rem;
+			text-align: left;
+			> div {
+				position: absolute;
+				left: 12px;
+				right: 0;
+				bottom: 0;
+			}
+		}
 		@media screen and (max-width: $break2) {
 			margin-left: -$navWidth;
 			&.mobileShown {
@@ -74,6 +91,7 @@ body, html {
 		}
 	}
 	> #contentWrap {
+		@extend .cf;
 		z-index: $z3;
 		margin-left: $navWidth;
 		transition: all .3s;
@@ -94,14 +112,14 @@ body, html {
 #content {
 	width: $contentWidth;
 	min-width: $contentMinWidth;
-	padding: 2rem 30px 2rem 40px;
+	padding: 2rem 30px 2rem 30px;
 	transition: all .3s;
 	@media screen and (max-width: $break1) {
 		width: auto;
 		min-width: inherit;
 	}
 	@media screen and (max-width: $break2) {
-		padding: 1rem 30px 1rem 20px;
+		padding: 1rem 20px 1rem 20px;
 	}
 	> header {
 		width: $headerWidth - ($headerHorizPadding * 2) - 12;
