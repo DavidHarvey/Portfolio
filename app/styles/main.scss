@@ -25,12 +25,13 @@ $trackingLineBG: #555;
 $navRightShadow: #eee;
 $navItemBG: #222;
 $navSlantOff: #888;
+$mobileNavHeight: 30px;
 
 //Header
 $headerWidth: $contentMinWidth;
-$headerHeight: 50px;
-$headerVertPadding: 30px;
-$headerHorizPadding: 25px;
+$headerHeight: 40px;
+$headerVertPadding: 25px;
+$headerHorizPadding: 30px;
 
 //Articles
 $articleBottom: 10rem;
@@ -71,7 +72,7 @@ $break2: 550px;
     }
 }
 
-@mixin navSlantRight($color, $z: $z2) {
+@mixin navSlantRight($color, $z: $z2, $width: 5px) {
     &:after, &:before {
         content: "";
         width: 0;
@@ -80,19 +81,18 @@ $break2: 550px;
         z-index: $z;
     }
     &:before {
-        border-left: 5px solid $color;
-        border-top: 5px solid transparent;
+        border-left: $width solid $color;
+        border-top: $width solid transparent;
         bottom: 0;
         top: 0;
     }
     &:after {
-        border-right: 5px solid $color;
-        border-bottom: 5px solid transparent;
-        height: 5px;
-        bottom: -5px;
+        border-right: $width solid $color;
+        border-bottom: $width solid transparent;
+        height: $width;
+        bottom: -$width;
     }
 }
-
 @import "typography";
 @import "structure";
 @import "content";

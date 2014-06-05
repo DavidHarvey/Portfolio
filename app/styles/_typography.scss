@@ -23,6 +23,7 @@ h1, h2, h3, h4 {
 a {
 	text-decoration: none;
 	color: $linkColor;
+	transition: color .3s;
 	&:hover, &:active, &:focus {color: $linkColorHover;}
 }
 
@@ -36,8 +37,14 @@ a {
 
 #content > header {
 	h1 {
-		font-size: 1.45em;
+		font-size: 1.1em;
 		line-height: 1.2;
-		font-family: 'Open Sans Condensed', sans-serif;
+		a {
+			color: #A3E28A;
+			&:hover, &:active, &:focus {color: $green;}
+		}
+		@media screen and (max-width: $break2) {
+			font-size: 1em;
+		}
 	}
 }

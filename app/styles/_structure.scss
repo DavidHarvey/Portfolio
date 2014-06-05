@@ -3,12 +3,6 @@ body, html {
 	min-height: 100%;
 }
 
-// body {
-// 	@media screen and (max-width: $break2) {
-// 		overflow-x: hidden;
-// 	}
-// }
-
 #container {
 	height: 100%;
 	width: 100%;
@@ -20,7 +14,7 @@ body, html {
 		left: 0;
 		bottom: 0;
 		transition: margin .3s;
-		z-index: $z3;
+		z-index: $z2;
 		overflow: hidden;
 
 		.ps-scrollbar-y-rail {
@@ -83,7 +77,7 @@ body, html {
 		top: 0;
 		left: 0;
 		right: 0;
-		height: 50px;
+		height: $mobileNavHeight;
 		z-index: $z4;
 		display: none;
 		@media screen and (max-width: $break2) {
@@ -92,12 +86,12 @@ body, html {
 	}
 	> #contentWrap {
 		@extend .cf;
-		z-index: $z3;
 		margin-left: $navWidth;
 		transition: all .3s;
+		position: relative;
 		@media screen and (max-width: $break2) {
 			margin-left: 0;
-			margin-top: 50px;
+			margin-top: $mobileNavHeight;
 			&.mobileShown {
 				margin-left: $navWidth - 1;
 			}
@@ -112,21 +106,27 @@ body, html {
 #content {
 	width: $contentWidth;
 	min-width: $contentMinWidth;
-	padding: 2rem 30px 2rem 30px;
+	padding: 30px;
 	transition: all .3s;
+	z-index: $z2;
 	@media screen and (max-width: $break1) {
 		width: auto;
 		min-width: inherit;
 	}
 	@media screen and (max-width: $break2) {
-		padding: 1rem 20px 1rem 20px;
+		padding: 20px;
 	}
 	> header {
-		width: $headerWidth - ($headerHorizPadding * 2) - 12;
-		padding: $headerHorizPadding $headerVertPadding;
-		margin: 0 0 10rem 0;
+		padding: $headerVertPadding $headerHorizPadding;
+		margin: 0 -30px 10rem -40px;
+		height: $headerHeight;
 		@media screen and (max-width: $break1) {
-			width: auto;
+			height: auto;
+			min-height: $headerHeight;
+		}
+		@media screen and (max-width: $break2) {
+			margin: 0 -20px 10rem -30px;
+			padding: 20px;
 		}
 	}
 }

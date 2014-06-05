@@ -207,7 +207,7 @@ module.exports = function (grunt) {
                         '<%= config.dist %>/styles/{,*/}*.css',
                         //'<%= config.dist %>/images/**/*.*',   was messing with retina.js image swap-in 
                         //'<%= config.dist %>/styles/fonts/{,*/}*.*',
-                        '<%= config.dist %>/*.{ico,png}'
+                        //'<%= config.dist %>/*.{ico,png}' fuck it, too much trouble for its worth
                     ]
                 }
             }
@@ -311,7 +311,7 @@ module.exports = function (grunt) {
                     cwd: '<%= config.app %>',
                     dest: '<%= config.dist %>',
                     src: [
-                        '*.{ico,png,txt,pdf}',
+                        '*.{ico,png,txt,pdf,docx}',
                         '.htaccess',
                         'images/{,*/}*.webp',
                         '{,*/}*.html',
