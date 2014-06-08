@@ -11,6 +11,7 @@ $(document).ready(function() {
 	var trackerTop = -150; //Default position
 	var trackerHeight = 50; //Default height
 	var navJumping = false; //Are we currently jumping to an area
+	var traverseHistory = false;
 	var animDelay = 300; //Animation delay period (match to css .3s)
 
 	////////////////////////
@@ -101,9 +102,10 @@ $(document).ready(function() {
 		}
 	};
 
-	//Update the window hash
-	var updateHash = function(page) {
-		window.location.hash = '/' + page;
+	//Update the window state
+	var updateState = function(page) {
+		page = (page ? page : '');
+		history.pushState(null, page, page);
 	};
 
 	////////////////////////
@@ -122,10 +124,10 @@ $(document).ready(function() {
 	}, 500);
 
 	//Scroll to the relevant position if given
-	var hash = window.location.hash;
-	if (hash && hash !== '#/') {
+	var pageState = window.location.pathname;
+	if (pageState && pageState !== '/') {
 		//Get position of article
-		var id = hash.substring(2);
+		var id = pageState.substring(1);
 		var target = $('#'+id).offset().top;
 		$('html, body').scrollTop(target);
 	}
@@ -137,6 +139,16 @@ $(document).ready(function() {
 	////////////////////////
 	// EVENTS
 	////////////////////////
+
+	window.onpopstate = function() {
+		traverseHistory = true;
+		var page = window.location.pathname.substring(1);
+		var target = (page ? $('#'+page) : $('#content'));
+		target = target.offset().top;
+		setTimeout(function() { //I have no idea why this is needed but it is
+			$('html, body').scrollTop(target);
+		}, 100);
+	};
 
 	//Mobile view, nav toggle
 	var toggling = false; //a fun word
@@ -162,6 +174,7 @@ $(document).ready(function() {
 		}
 	});
 
+	//Hide the nav on nav item click (for mobile view)
 	$('body').on('click', '#container > nav.main.mobileShown a', function() {
 		//hide
 		if (toggling) {return;}
@@ -208,7 +221,7 @@ $(document).ready(function() {
 						toggleCurrentNav($(el), 'off');
 					}
 				});
-				updateHash(id);
+				updateState(id);
 				if (!ele.parent().hasClass('logo')) {
 					//find the relevant nav icon if we're not clicking on it
 					if (!ele.parent().parent().parent().hasClass('main')) {
@@ -230,7 +243,7 @@ $(document).ready(function() {
 		onEnter: function() {
 			//hide nav logo, show header logo
 			toggleLogo('header');
-			updateHash('');
+			//updateState(false);
 		},
 		onLeave: function() {
 			//show nav logo, hide header logo
@@ -249,7 +262,10 @@ $(document).ready(function() {
 				if (!navJumping) {
 					toggleCurrentNav(navLink, 'on');
 					updateTrackerPos(navLink);
-					updateHash(id);
+					if (!traverseHistory) {
+						updateState(id);
+					}
+					traverseHistory = false;
 					if (index === 0) {
 						toggleLogo('nav');
 					}
