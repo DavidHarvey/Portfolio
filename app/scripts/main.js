@@ -104,7 +104,7 @@ $(document).ready(function() {
 
 	//Update the window state
 	var updateState = function(page) {
-		page = (page ? page : '');
+		page = (page ? page : '/');
 		history.pushState(null, page, page);
 	};
 
@@ -243,7 +243,7 @@ $(document).ready(function() {
 		onEnter: function() {
 			//hide nav logo, show header logo
 			toggleLogo('header');
-			//updateState(false);
+			updateState(false);
 		},
 		onLeave: function() {
 			//show nav logo, hide header logo
@@ -316,7 +316,7 @@ $(document).ready(function() {
 	$('#contact form').validate({
 		rules: {
 			body: {
-				minlength: 10
+				minlength: 5
 			}
 		},
 		submitHandler: function(form) {

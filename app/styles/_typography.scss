@@ -6,12 +6,16 @@
 	font-smoothing: antialiased;
 }
 
+::selection {
+	background: $brightGreen;
+}
+
 body {
 	font-family: 'Open Sans', Arial, sans-serif;
 	font-weight: 400;
 	font-size: 16px;
 	color: $bodyColor;
-	@media screen and (max-width: $break1) {
+	@media screen and (max-width: $break2) {
 		font-size: 14px;
 	}
 }
@@ -25,6 +29,10 @@ a {
 	color: $linkColor;
 	transition: color .3s;
 	&:hover, &:active, &:focus {color: $linkColorHover;}
+}
+
+p {
+	line-height: 1.5;
 }
 
 #container > nav.main {
@@ -43,7 +51,7 @@ a {
 			color: #A3E28A;
 			&:hover, &:active, &:focus {color: $green;}
 		}
-		@media screen and (max-width: $break2) {
+		@media screen and (max-width: $break3) {
 			font-size: 1em;
 		}
 	}

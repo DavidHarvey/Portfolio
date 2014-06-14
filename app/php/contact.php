@@ -14,7 +14,7 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 }
 
 //Is body long enough?
-if (strlen($body) < 10) {
+if (strlen($body) < 5) {
 	return;
 }
 

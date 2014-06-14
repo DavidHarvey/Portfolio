@@ -31,8 +31,10 @@ $mobileNavHeight: 30px;
 //Header
 $headerWidth: $contentMinWidth;
 $headerHeight: 40px;
-$headerVertPadding: 25px;
-$headerHorizPadding: 30px;
+$headerPadT: 25px;
+$headerPadR: 30px;
+$headerPadB: 25px;
+$headerPadL: 30px;
 
 //Articles
 $articleBottom: 10rem;
@@ -59,8 +61,9 @@ $z3: 10;
 $z4: 15;
 
 //Media query breakpoints
-$break1: 820px;
-$break2: 550px;
+$break1: 900px;
+$break2: 820px;
+$break3: 550px;
 
 .cf {
     *zoom: 1;
