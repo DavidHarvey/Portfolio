@@ -290,13 +290,10 @@ module.exports = function (grunt) {
         //     }
         // },
         // uglify: {
-        //     dist: {
-        //         files: {
-        //             '<%= config.dist %>/scripts/scripts.js': [
-        //                 '<%= config.dist %>/scripts/scripts.js'
-        //             ]
-        //         }
-        //     }
+        //     options: {
+        //         beautify: true,
+        //         preserveComments: true
+        //     },
         // },
         // concat: {
         //     dist: {}
